@@ -2,7 +2,7 @@
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;  // The object the camera will follow (e.g., the ball)
+    public Transform target;  // The object that camera will follow
     public float rotationSpeed = 100f;  // Speed of camera rotation
     public float distance = 10f;  // Distance from the target
     public float height = 5f;  // Height of the camera from the target
@@ -11,13 +11,6 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        if (target == null)
-        {
-            Debug.LogError("Camera target is not assigned!");
-            return;
-        }
-
-        // Position the camera initially behind the target
         UpdateCameraPosition();
     }
 

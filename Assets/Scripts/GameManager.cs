@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     void StartLevel(int level)
     {
-        Debug.Log("Starting Level: " + level);
         enemyCount = level;  // Number of enemies increases with level
 
         // Spawn enemies based on current level
@@ -69,7 +68,6 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("Game Over! You fell off.");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  // Restart game
     }
 }

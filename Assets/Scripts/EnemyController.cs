@@ -10,20 +10,14 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
         player = GameObject.Find("Player").GetComponent<Transform>();
-
-        // Ensure the player reference is set
-        if (player == null)
-        {
-            Debug.LogError("Player not assigned to the enemy!");
-        }
     }
 
     void FixedUpdate()
     {
         MoveTowardsPlayer();
 
+        //If enemy fell off the platform destroy it
         if (transform.position.y < -10) 
         {
             Destroy(gameObject);
